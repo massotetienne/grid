@@ -1,100 +1,158 @@
-/* edited by squallou */
-/* 12/07/2020 */
-/* **************************** */
+/* color /font /size*/
 
-/* color backgroud */
-.box {
-    background-color: grey;
+.menu-b{font-weight: 700;
+        font-style: oblique;
+       color: cornflowerblue; 
+}
+.services{font-weight: 700;
+  font-style: oblique;
+ color: rgb(81, 126, 81);
+  
 }
 
+.tarifs {
+  font-weight: 700;
+        font-style: oblique;
+       color: gold;}
+.qsn{font-weight: 700;
+       font-style: oblique;
+      color: rgb(255, 0, 0);}
 
+body
+{
+  padding: 20px;
 
-/* body grid */
-#grid{
-gap: 20px;
+  background-color: blueviolet;
+  background-image: url(/bgchiant.jpg);
+}
+ 
+.box
+{
+  background: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-
-#grid > .logo {
-    grid-area: logo;
-}
-#grid > .menus {
-    grid-area: menus;
-}
-#grid > .crea {
-    grid-area: crea;
-}
-#grid > .t-crea {
-    grid-area: t-crea;
-}
-#grid > .art{
-    grid-area: art;
-}
-#grid > footer{
-    grid-area: foot;
-}
-
-#grid {
-    display: grid;
-    grid-template-columns: 10% 20% 20% 20% 20% 10%;
-    grid-template-rows: 200px 200px auto 200px;
-    grid-template-areas: "logo logo menus menus menus ."
-                         ". crea crea crea crea ."
-                         ". art art art art ."
-                         ". foot foot foot foot .";
-}
-
-/* body grid *****/
-
-/* logo */
-.logo > .img-logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 250px;
-    max-height: 100%;
-}
-/* logo */
+/* grid body */
 
 
+
+body
+{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px;
+}
+
+.logo
+{grid-column: 1 ;
+grid-row: 1;}
+.menu
+{
+  grid-column: 2/ span 5 ;
+  grid-row:1 ;
+} 
+.breadcrumb
+{
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+.main
+{
+  grid-column: 1/span 4;
+  grid-row: 3;
+}
+.sidebar
+{
+  grid-column: span 2;
+  grid-row: 3;
+}
+.footer
+{
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+/* /grid body */
+
+/* articles */
+.main{
+  display: grid;
+  grid-column: 1/span 4;
+  grid-row: 3;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: (100px,auto);
+  grid-gap: 20px;
+}
+/* /articles */
+
+/* images logo header */
+header > img {
+  width: 100%;
+  height: 100%;
+}
+/* /images logo header */
 
 /* menu */
-.menus{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
-/* menu **********/
+/* /menu */
 
-/* box nos crea */
-.box > .img-crea{
-    max-width: 200px;
-    max-height: 200px;
+/* nos creations */
+.breadcrumb {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  
 }
-
-#grid>.crea{
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows: 200px;
-    grid-template-areas: "t-crea crea crea";
+.crea{
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  margin: 20px;
 }
-/* box nos crea */
-
-/* osef */
-.art p{
-    text-align: start
-    
+.n-crea{
+  color: cornflowerblue;
 }
+/* /nos creations */
 
+/* nos articles */
 
-
-
+.img-art{
+  display: flex;
+  align-self: flex-end;
+  max-width: 150px;
+  max-height: 150px;
+}
+.date{
+  text-align: right;
+}
+/* /nos articles */
 
 /* footer */
-footer{
+.footer{
+  text-align: center;
+}
+/* footer */
+
+/* side bar /tableau tarifs */
+.t-tarifs{
+  width: 100%;
+  height: 100%;
+}
+.sidebar{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 680px) {
+  .sidebar{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    
+    flex-wrap: nowrap;
+    visibility: hidden;
+
+  }
 }

@@ -1,0 +1,100 @@
+/* edited by squallou */
+/* 12/07/2020 */
+/* **************************** */
+
+/* color backgroud */
+.box {
+    background-color: grey;
+}
+
+
+
+/* body grid */
+#grid{
+gap: 20px;
+}
+
+
+#grid > .logo {
+    grid-area: logo;
+}
+#grid > .menus {
+    grid-area: menus;
+}
+#grid > .crea {
+    grid-area: crea;
+}
+#grid > .t-crea {
+    grid-area: t-crea;
+}
+#grid > .art{
+    grid-area: art;
+}
+#grid > footer{
+    grid-area: foot;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    grid-template-rows: 200px 200px auto 200px;
+    grid-template-areas: "logo logo menus menus menus ."
+                         ". crea crea crea crea ."
+                         ". art art art art ."
+                         ". foot foot foot foot .";
+}
+
+/* body grid *****/
+
+/* logo */
+.logo > .img-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 250px;
+    max-height: 100%;
+}
+/* logo */
+
+
+
+/* menu */
+.menus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* menu **********/
+
+/* box nos crea */
+.box > .img-crea{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#grid>.crea{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 200px;
+    grid-template-areas: "t-crea crea crea";
+}
+/* box nos crea */
+
+/* osef */
+.art p{
+    text-align: start
+    
+}
+
+
+
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
